@@ -1,24 +1,25 @@
 # ShelfAnalyzer
 
-ShelfAnalyzer is a Django-based project that analyzes the arrangement of products on store shelves, identifying the shape and location of each brand.
+ShelfAnalyzer is a Django-based project that provides a powerful solution for optimizing shelf space in retail stores. It enables retailers to analyze the arrangement of products on store shelves, identifying the shape and location of each brand with precision and efficiency.
 
 ## Table of Contents
 
 - [Introduction](#introduction)
 - [Features](#features)
 - [Installation](#installation)
-- [Usage](#usage)
 - [API Documentation](#api-documentation)
-- [Configuration](#configuration)
-- [Testing](#testing)
-- [Contributing](#contributing)
-- [License](#license)
-- [Acknowledgments](#acknowledgments)
 - [Contact Information](#contact-information)
 
 ## Introduction
 
-Provide a brief introduction to your project. Explain what problem it solves and its main goals.
+ShelfAnalyzer Mini-Project is a simple Django-based application that provides a single API call to analyze the arrangement of products on store shelves. It identifies the shape and location of each brand, offering a basic solution for optimizing shelf space in retail stores.
+
+With ShelfAnalyzer, you can:
+
+- Accurately identify and analyze the arrangement of products on shelves.
+- Determine the shape and location of each brand, whether it's a horizontal rectangle, vertical rectangle, square, or irregular polygon.
+
+
 
 ## Features
 
@@ -26,7 +27,6 @@ List the key features and functionality of your ShelfAnalyzer project.
 
 - Analyze the arrangement of products on store shelves.
 - Identify the shape and location of each brand.
-- [Add more features here...]
 
 ## Installation
 
@@ -34,7 +34,7 @@ Explain how to set up and run your ShelfAnalyzer project. Include information ab
 
 ```bash
 # Clone the repository
-git clone <repository-url>
+git clone https://github.com/slimshady808/ShelfAnalyzer.git
 cd ShelfAnalyzer
 
 # Create and activate a virtual environment (optional but recommended)
@@ -49,3 +49,5 @@ python manage.py migrate
 
 # Start the development server
 python manage.py runserver
+
+ShelfAnalyzer is now up and running at http://localhost:8000.
