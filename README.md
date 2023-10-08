@@ -61,28 +61,43 @@ http://localhost:8000.
 ## Test Case 1: Vertical Rectangles
 
 ```bash
-curl -X POST -H "Content-Type: application/json" -d '[[...], [...]]' http://localhost:8000/api/analyze-shelf/
-
-
+# Test Case 1: Vertical Rectangles
+curl -X POST -H "Content-Type: application/json" -d '[
+  ["G", "M", "N", "B"],
+  ["G", "M", "N", "B"],
+  ["G", "M", "N", "B"],
+  ["G", "M", "N", "B"]
+]' http://localhost:8000/api/analyze-shelf/
 ```
 ## Expected Result
 
 {
-  "Brand1": {"shape": "vertical rectangle", "location": "left"},
-  "Brand2": {"shape": "vertical rectangle", "location": "right"}
+  "G": {"shape": "vertical rectangle", "location": "left"},
+  "M": {"shape": "vertical rectangle", "location": "left"},
+  "B": {"shape": "vertical rectangle", "location": "right"},
+  "N": {"shape": "vertical rectangle", "location": "right"}
 }
 
 ## Test Case 2: Squares
 
 ```bash
-curl -X POST -H "Content-Type: application/json" -d '[[...], [...]]' http://localhost:8000/api/analyze-shelf/
+curl -X POST -H "Content-Type: application/json" -d '
+[
+  ["A", "A", "B", "B"],
+  ["A", "A", "B", "B"],
+  ["C", "C", "D", "D"],
+  ["C", "C", "D", "D"]
+]
+' http://localhost:8000/api/analyze-shelf/
 
 ```
 ## Expected Result
 
 {
-  "Brand1": {"shape": "square", "location": "top left"},
-  "Brand2": {"shape": "square", "location": "top right"}
+  "A": {"shape": "square", "location": ["top left"]},
+  "B": {"shape": "square", "location": ["top right"]},
+  "C": {"shape": "square", "location": ["bottom left"]},
+  "D": {"shape": "square", "location": ["bottom right"]}
 }
 
 
