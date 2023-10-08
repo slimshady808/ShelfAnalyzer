@@ -7,8 +7,7 @@ ShelfAnalyzer is a Django-based project that provides a powerful solution for op
 - [Introduction](#introduction)
 - [Features](#features)
 - [Installation](#installation)
-- [API Documentation](#api-documentation)
-- [Contact Information](#contact-information)
+- [Test Cases and Results](#test-cases-and-results)
 
 ## Introduction
 
@@ -50,4 +49,41 @@ python manage.py migrate
 # Start the development server
 python manage.py runserver
 
-ShelfAnalyzer is now up and running at http://localhost:8000.
+# ShelfAnalyzer is now up and running at 
+http://localhost:8000.
+
+```
+
+
+
+## Test Cases and Results
+
+## Test Case 1: Vertical Rectangles
+
+```bash
+curl -X POST -H "Content-Type: application/json" -d '[[...], [...]]' http://localhost:8000/api/analyze-shelf/
+
+
+```
+## Expected Result
+
+{
+  "Brand1": {"shape": "vertical rectangle", "location": "left"},
+  "Brand2": {"shape": "vertical rectangle", "location": "right"}
+}
+
+## Test Case 2: Squares
+
+```bash
+curl -X POST -H "Content-Type: application/json" -d '[[...], [...]]' http://localhost:8000/api/analyze-shelf/
+
+```
+## Expected Result
+
+{
+  "Brand1": {"shape": "square", "location": "top left"},
+  "Brand2": {"shape": "square", "location": "top right"}
+}
+
+
+
