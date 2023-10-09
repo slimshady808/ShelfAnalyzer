@@ -17,8 +17,4 @@ RUN pip install  -r requirements.txt
 # Copy the current directory contents into the container
 COPY . /code/
 
-# Expose the port that the Django application will run on
-# EXPOSE 8000
 
-# # Start the Django application
-# CMD ["python", "manage.py", "runserver", "0.0.0.0:8000"]

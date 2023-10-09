@@ -29,7 +29,39 @@ List the key features and functionality of your ShelfAnalyzer project.
 
 ## Installation
 
-Explain how to set up and run your ShelfAnalyzer project. Include information about dependencies, database setup, and any other necessary steps.
+Explain how to set up and run your ShelfAnalyzer project. Include information about dependencies, setup, and any other necessary steps.
+
+
+## Requirements
+
+Before you begin, ensure you have met the following requirements:
+
+- [Python](https://www.python.org/downloads/) (version 3.11.4)
+- [Docker](https://docs.docker.com/get-docker/) (version 24.0.6)
+
+## Getting Started
+
+Follow these steps to set up and run the project:
+
+1. Download the project zip file from the email attachment.
+
+2. Unzip the downloaded file.
+
+3. Open the project folder in your preferred code editor.
+
+### Running the Application
+
+1. Build the Docker containers:
+
+ ```bash
+   cd ShelfAnalyzer
+
+   docker-compose build
+
+   docker-compose up
+ ```
+
+   
 
 ```bash
 # Clone the repository
@@ -88,7 +120,7 @@ curl -X POST -H "Content-Type: application/json" -d '
   ["C", "C", "D", "D"],
   ["C", "C", "D", "D"]
 ]
-' http://localhost:8000/analyze-shelf/
+' http://localhost:8000/analyze-shelf/d
 
 ```
 ## Expected Result
