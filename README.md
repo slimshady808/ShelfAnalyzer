@@ -59,14 +59,17 @@ Follow these steps to set up and run the project:
    docker-compose build
 
    docker-compose up
+
+   # ShelfAnalyzer is now up and running at 
+  http://localhost:8000.
  ```
 
-   
+   ## OR
 
 ```bash
 # Clone the repository
 git clone https://github.com/slimshady808/ShelfAnalyzer.git
-cd ShelfAnalyzer
+
 
 # Create and activate a virtual environment (optional but recommended)
 python -m venv venv
@@ -94,7 +97,7 @@ http://localhost:8000.
 
 ```bash
 # Test Case 1: Vertical Rectangles
-curl -X POST -H "Content-Type: application/json" -d '[
+ POST  "Content-Type: application/json"  '[
   ["G", "M", "N", "B"],
   ["G", "M", "N", "B"],
   ["G", "M", "N", "B"],
@@ -113,14 +116,14 @@ curl -X POST -H "Content-Type: application/json" -d '[
 ## Test Case 2: Squares
 
 ```bash
-curl -X POST -H "Content-Type: application/json" -d '
+ POST  "Content-Type: application/json"  '
 [
   ["A", "A", "B", "B"],
   ["A", "A", "B", "B"],
   ["C", "C", "D", "D"],
   ["C", "C", "D", "D"]
 ]
-' http://localhost:8000/analyze-shelf/d
+' http://localhost:8000/analyze-shelf/
 
 ```
 ## Expected Result
