@@ -89,7 +89,19 @@ http://localhost:8000.
 
 ```
 
+# Usage
 
+## Accessing the Webpage
+
+Once the Docker containers are running, you can access the application in your web browser at
+ http://localhost:8000/
+
+ 1. Open a new terminal window or use a tool like Postman to send HTTP requests.
+
+2. Send a GET or POST request to the desired URL
+
+## Sending HTTP Requests
+To interact with the application, you can send HTTP requests to specific URLs. Here's how:
 
 ## Test Cases and Results
 
