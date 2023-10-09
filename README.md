@@ -67,7 +67,7 @@ curl -X POST -H "Content-Type: application/json" -d '[
   ["G", "M", "N", "B"],
   ["G", "M", "N", "B"],
   ["G", "M", "N", "B"]
-]' http://localhost:8000/api/analyze-shelf/
+]' http://127.0.0.1:8000/analyze-shelf/
 ```
 ## Expected Result
 
@@ -88,7 +88,7 @@ curl -X POST -H "Content-Type: application/json" -d '
   ["C", "C", "D", "D"],
   ["C", "C", "D", "D"]
 ]
-' http://localhost:8000/api/analyze-shelf/
+' http://127.0.0.1:8000/analyze-shelf/
 
 ```
 ## Expected Result

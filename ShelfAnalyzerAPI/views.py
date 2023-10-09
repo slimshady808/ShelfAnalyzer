@@ -4,19 +4,49 @@ from rest_framework.response import Response
 from .utils import identify_brands, identify_shape, identify_location
 
 
+@api_view(['GET'])
+def getRoutes(request):
+    """
+    Provides information about the available API endpoints.
+
+    Args:
+        request (HttpRequest): The HTTP GET request.
+
+    Returns:
+        Response: A JSON response with a list of available API endpoints and their descriptions.
+    """
+    routes = [
+        {
+            'endpoint': '/analyze-shelf/',
+            'description': 'Analyze a shelf layout and identify brand shapes and locations.'
+        }
+    ]
+
+    return Response(routes)
+
 @api_view(['POST'])
 def analyze_shelf(request):
     """
     Analyzes a shelf layout and identifies the shape and location of each brand.
 
     Args:
-        request (HttpRequest): The HTTP POST request containing the shelf layout data.
-    
-    Returns:
-        Response: A JSON response with the identified brand shapes and locations.
+        request (HttpRequest): The HTTP POST request containing the shelf layout data in a JSON format.
+            The shelf layout data should be a 2D array representing the shelf's content.
+            
+            Example JSON payload:
+            [
+                ["G", "G", "M", "M"],
+                ["G", "G", "M", "M"],
+                ["B", "B", "N", "N"],
+                ["B", "B", "N", "N"]
+            ]
 
+    Returns:
+        Response: A JSON response with the identified brand shapes and locations. The response format is a dictionary
+            where each brand is a key, and the corresponding value is an object containing the brand's shape and location.
 
     """
+
     try:
         # Get the 2D array from the request data
         shelf_layout = request.data
